@@ -1,11 +1,61 @@
-.register-container { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    height: 100%; 
-  } 
-   
-  .login-link { 
-    text-align: center; 
-    margin-top: 10px; 
-  }
+ion-content {
+  --background: #ffe4e1; /* Fondo rosado claro para todo el contenido */
+}
+
+.register-container ion-card {
+  background-color: #fff0f5; /* Fondo rosado pálido para la tarjeta */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ion-card-title {
+  color: #c71585; /* Título rosado oscuro */
+  font-weight: bold;
+}
+
+ion-card-subtitle {
+  color: #db7093; /* Subtítulo rosado */
+}
+
+ion-item {
+  --background: #fffafa; /* Fondo rosado claro para los inputs */
+  --border-color: #d8bfd8; /* Borde rosado claro */
+  --color: #8b008b; /* Texto rosado oscuro */
+}
+
+ion-item ion-label {
+  color: #c71585; /* Color rosado oscuro para las etiquetas */
+}
+
+ion-input {
+  --placeholder-color: #db7093; /* Placeholder en rosado más intenso */
+}
+
+ion-button {
+  --background: #ff69b4; /* Fondo rosado intenso para el botón */
+  --background-hover: #ff1493; /* Fondo más oscuro al pasar el cursor */
+  --color: white; /* Texto blanco */
+  border-radius: 5px;
+}
+
+.login-link ion-label {
+  color: #8b008b; /* Texto rosado oscuro para el enlace */
+}
+
+.login-link a {
+  color: #ff69b4; /* Color rosado intenso para el enlace */
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  color: #ff1493; /* Color más oscuro al pasar el cursor sobre el enlace */
+  text-decoration: underline;
+}
+
+ion-card-content {
+  color: #8b008b; /* Texto en rosado oscuro para el contenido */
+}
+
+ion-card-header {
+  background-color: #fffafa; /* Fondo pálido para los encabezados */
+}

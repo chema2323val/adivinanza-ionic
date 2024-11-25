@@ -1,0 +1,46 @@
+  
+  ion-header ion-toolbar {
+    --background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para el toolbar */
+    --color: #4b0082; /* Color del texto del título */
+    border-bottom: 2px solid #ff69b4; /* Línea decorativa en la parte inferior */
+  }
+  
+  ion-title {
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra al texto del título */
+  }
+  
+  ion-list {
+    background: rgba(2, 2, 2, 0.9); /* Fondo semitransparente para los elementos */
+    border-radius: 10px; /* Bordes redondeados para la lista */
+    padding: 10px; /* Espaciado interno */
+    margin: 20px; /* Espaciado externo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar la lista */
+  }
+  
+  ion-item {
+    border-bottom: 1px solid #ff69b4; /* Línea decorativa entre los elementos */
+    --background: none; /* Fondo transparente para los ítems */
+  }
+  
+  ion-item:last-child {
+    border-bottom: none; /* Elimina la línea del último elemento */
+  }
+  
+  h3 {
+    color: #c71585; /* Color rosado oscuro para las posiciones */
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  
+  ion-label {
+    color: #4b0082; /* Color púrpura oscuro para el texto */
+    font-size: 1rem;
+  }
+  
+  ion-note {
+    font-weight: bold;
+    color: #c71585; /* Color rosado oscuro para los puntos */
+    font-size: 1.2rem;
+  }
+  

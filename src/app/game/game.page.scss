@@ -1,0 +1,57 @@
+ion-content {
+    --background: #ffe4e1; /* Fondo rosado claro para el contenido */
+  }
+  
+  .game-container ion-card {
+    background-color: #fff0f5; /* Fondo rosado pálido para las tarjetas */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  ion-card-title {
+    color: #c71585; /* Título rosado oscuro */
+    font-weight: bold;
+  }
+  
+  ion-card-subtitle {
+    color: #db7093; /* Subtítulo rosado */
+  }
+  
+  p {
+    color: #8b008b; /* Texto de instrucciones rosado oscuro */
+  }
+  
+  ion-item {
+    --background: #fffafa; /* Fondo rosado claro para el input */
+    --border-color: #d8bfd8; /* Borde rosado claro */
+    --color: #8b008b; /* Texto rosado oscuro */
+  }
+  
+  ion-item ion-label {
+    color: #c71585; /* Color del texto del label */
+  }
+  
+  ion-input {
+    --placeholder-color: #db7093; /* Placeholder rosado más intenso */
+  }
+  
+  ion-button {
+    --background: #ff69b4; /* Fondo rosado intenso para los botones */
+    --background-hover: #ff1493; /* Fondo más oscuro al pasar el cursor */
+    --color: white; /* Texto blanco */
+    border-radius: 5px;
+  }
+  
+  ion-button[color="medium"] {
+    --background: #d8bfd8; /* Fondo rosado suave para el botón de reinicio */
+    --background-hover: #db7093; /* Fondo más intenso al pasar el cursor */
+  }
+  
+  ion-card-header {
+    background-color: #fffafa; /* Fondo pálido para los encabezados */
+  }
+  
+  ion-card-content {
+    color: #8b008b; /* Color del texto del contenido */
+  }
+  

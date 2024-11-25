@@ -5,26 +5,51 @@
         <ion-card-title>Bienvenido</ion-card-title> 
         <ion-card-subtitle>Adivina el numero</ion-card-subtitle> 
       </ion-card-header> 
- 
+
       <ion-card-content> 
-        <form #frmLogin="ngForm"> 
+        <form #frmLogin="ngForm" novalidate> 
           <!-- Campo de Usuario --> 
-          <ion-item> 
+          <ion-item [class.invalid]="username.invalid && username.touched"> 
             <ion-label position="floating">Usuario</ion-label> 
-            <ion-input [(ngModel)]="usuario" type="text" name="username" required></ion-input> 
+            <ion-input 
+              [(ngModel)]="usuario" 
+              type="text" 
+              name="username" 
+              required 
+              #username="ngModel"> 
+            </ion-input> 
           </ion-item> 
- 
+          <ion-note *ngIf="username.invalid && username.touched" color="danger">
+            El usuario es obligatorio.
+          </ion-note> 
+
           <!-- Campo de Contraseña --> 
-          <ion-item> 
+          <ion-item [class.invalid]="password.invalid && password.touched"> 
             <ion-label position="floating">Contraseña</ion-label> 
-            <ion-input [(ngModel)]="password" type="password" name="password" required></ion-input> 
+            <ion-input 
+              [(ngModel)]="password" 
+              type="password" 
+              name="password" 
+              required 
+              minlength="6" 
+              #password="ngModel"> 
+            </ion-input> 
           </ion-item> 
+          <ion-note *ngIf="password.invalid && password.touched" color="danger">
+            La contraseña debe tener al menos 6 caracteres.
+          </ion-note> 
           <br/> 
- 
+
           <!-- Botón de Ingresar --> 
-          <ion-button (click)="onClickIngresar(frmLogin)" expand="block" color="primary">Ingresar</ion-button> 
+          <ion-button 
+            (click)="onClickIngresar(frmLogin)" 
+            expand="block" 
+            color="primary" 
+            [disabled]="frmLogin.invalid">
+            Ingresar
+          </ion-button> 
         </form>
-         
+
         <!-- Enlace para registrarse --> 
         <div class="register-link"> 
           <ion-label> 

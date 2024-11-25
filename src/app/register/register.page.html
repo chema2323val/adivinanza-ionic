@@ -1,43 +1,81 @@
-<ion-content class="ion-padding"> 
-  <div class="register-container"> 
-    <ion-card mode="ios"> 
-      <ion-card-header class="ion-text-center"> 
-        <ion-card-title>Registrate</ion-card-title> 
-        <ion-card-subtitle>Adivina el numero</ion-card-subtitle> 
-      </ion-card-header> 
- 
-      <ion-card-content> 
-        <form #frmRegistro="ngForm"> 
-          <!-- Campo de Usuario --> 
-          <ion-item> 
-            <ion-label position="floating">Usuario</ion-label> 
-            <ion-input [(ngModel)]="usuario" type="text" name="username" required></ion-input> 
-          </ion-item> 
- 
-          <!-- Campo de Correo --> 
-          <ion-item> 
-            <ion-label position="floating">Correo</ion-label> 
-            <ion-input [(ngModel)]="correo" type="email" name="email" required></ion-input> 
-          </ion-item> 
- 
-          <!-- Campo de Contraseña --> 
-          <ion-item> 
-            <ion-label position="floating">Contraseña</ion-label> 
-            <ion-input [(ngModel)]="password" type="password" name="password" required></ion-input> 
-          </ion-item> 
-          <br/> 
-          <!-- Botón de Registro --> 
-          <ion-button (click)="onClickRegistrar(frmRegistro)" expand="block" color="primary">Registrarse</ion-button> 
-        </form>  
- 
-        <!-- Enlace para iniciar sesión --> 
-        <div class="login-link"> 
-          <ion-label> 
-            ¿Ya tienes una cuenta? 
-            <a routerLink="/login">Inicia sesión aquí</a> 
-          </ion-label> 
-        </div> 
-      </ion-card-content> 
-    </ion-card> 
-  </div> 
-</ion-content> 
+<ion-content class="ion-padding">
+  <div class="register-container">
+    <ion-card mode="ios">
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>Regístrate</ion-card-title>
+        <ion-card-subtitle>Adivina el número</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form #frmRegistro="ngForm" (ngSubmit)="onClickRegistrar(frmRegistro)">
+          <!-- Campo de Usuario -->
+          <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input
+              [(ngModel)]="usuario"
+              type="text"
+              name="username"
+              required
+              minlength="3"
+              maxlength="20"
+              #username="ngModel">
+            </ion-input>
+          </ion-item>
+          <ion-note color="danger" *ngIf="username.touched && username.invalid">
+            El usuario es obligatorio y debe tener entre 3 y 20 caracteres.
+          </ion-note>
+
+          <!-- Campo de Correo -->
+          <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input
+              [(ngModel)]="correo"
+              type="email"
+              name="email"
+              required
+              #email="ngModel">
+            </ion-input>
+          </ion-item>
+          <ion-note color="danger" *ngIf="email.touched && email.invalid">
+            Introduce un correo válido.
+          </ion-note>
+
+          <!-- Campo de Contraseña -->
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input
+              [(ngModel)]="password"
+              type="password"
+              name="password"
+              required
+              minlength="8"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$"
+              #password="ngModel">
+            </ion-input>
+          </ion-item>
+          <ion-note color="danger" *ngIf="password.touched && password.invalid">
+            La contraseña debe tener al menos 8 caracteres, incluir una letra mayúscula, una minúscula y un número.
+          </ion-note>
+
+          <br />
+          <!-- Botón de Registro -->
+          <ion-button
+            type="submit"
+            [disabled]="frmRegistro.invalid"
+            expand="block"
+            color="primary">
+            Registrarse
+          </ion-button>
+        </form>
+
+        <!-- Enlace para iniciar sesión -->
+        <div class="login-link">
+          <ion-label>
+            ¿Ya tienes una cuenta?
+            <a routerLink="/login">Inicia sesión aquí</a>
+          </ion-label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

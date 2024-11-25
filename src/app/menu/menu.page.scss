@@ -1,14 +1,63 @@
-.menu-container { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    height: 100%; 
-} 
- 
-.menu-option { 
-    width: 200px; 
-    height: 125px; 
-    text-align: center; 
-    align-content: center; 
-}
+ion-content {
+    --background: none; /* Elimina el color de fondo base de Ionic */
+    background-image: url('/assets/rosa.jpg'); /* Ruta a tu imagen */
+    background-size: cover; /* La imagen cubrirá toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantén la imagen fija al hacer scroll */
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Centrar todo verticalmente */
+  }
+  
+  .menu-container p h1 {
+    color: #c71585; /* Título principal en rosado oscuro */
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Añade sombra al texto */
+  }
+  
+  .menu-container p ion-text {
+    color: #8b008b; /* Texto adicional en rosado oscuro */
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+  }
+  
+  .menu-option {
+    width: 80%; /* Ajusta el tamaño de las tarjetas */
+    margin: 10px auto; /* Espaciado entre las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para las tarjetas */
+  }
+  
+  .menu-option[color="primary"] {
+    --background: #ff69b4; /* Fondo rosado intenso */
+    --background-hover: #ff1493; /* Fondo más oscuro al pasar el cursor */
+    --color: white; /* Texto blanco */
+  }
+  
+  .menu-option[color="warning"] {
+    --background: #ffd1dc; /* Fondo rosado suave para el ranking */
+    --color: #8b008b; /* Texto rosado oscuro */
+  }
+  
+  .menu-option[color="dark"] {
+    --background: #d8bfd8; /* Fondo lavanda rosado para salir */
+    --color: #4b0082; /* Texto en púrpura oscuro */
+  }
+  
+  ion-card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .menu-option:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+    transition: transform 0.2s ease;
+  }
+  

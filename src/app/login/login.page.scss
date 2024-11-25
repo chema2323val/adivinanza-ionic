@@ -1,11 +1,58 @@
-.login-container { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    height: 100%; 
-  } 
-   
-  .register-link { 
-    text-align: center; 
-    margin-top: 10px; 
-  }
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url('/assets/kitti.jpg'); /* Ruta de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+ion-card {
+  background-color: #fce4ec; /* Rosa muy claro para el fondo del card */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+ion-card-header {
+  background-color: #f8bbd0; /* Rosa suave para el encabezado */
+}
+
+ion-card-title {
+  color: #d81b60; /* Rosa fuerte para el título */
+  font-weight: bold;
+}
+
+ion-card-subtitle {
+  color: #ad1457; /* Rosa intermedio para el subtítulo */
+}
+
+ion-item {
+  --background: #f8bbd0; /* Fondo rosado suave en los campos */
+  --color: #d81b60; /* Texto en rosa fuerte */
+}
+
+ion-input {
+  --border-color: #f06292; /* Rosa claro para los bordes del input */
+}
+
+ion-button {
+  background-color: #ff80ab; /* Rosa más claro para el botón */
+  color: white; /* Texto blanco para contraste */
+  --border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s;
+}
+
+ion-button:hover {
+  background-color: #f50057; /* Rosa más oscuro en hover */
+}
+
+.register-link a {
+  color: #c2185b; /* Rosa intermedio para el enlace */
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  color: #880e4f; /* Rosa más oscuro cuando se pasa el ratón */
+}
